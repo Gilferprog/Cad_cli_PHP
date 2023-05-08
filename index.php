@@ -25,19 +25,24 @@
       <ul>
         <li><a href="index.php">Home</li></a>
         <li><a href="addtbc.php">Cadastrar</li></a>
+        <li><a href="#"><?php include_once "form_busca.php";?></li></a> 
       </ul>
     </nav>
+    
     <style>
       header {
         background-color: #142952;
-      }
-
-      li {
-        display: inline;
-        margin: 0px 0px 0px 20px;
-        justify-content: space-between;
-      }
+      } 
+      nav li{
+        list-style: none;/*Remove o marcadore das li*/              
+        display: inline-block;/*Posiciona as li lado a lado*/
+        margin: 0px 100px 20px 10px;/*Fas o espaçamento entre as li*/            
+      }      
     </style>
+
+
+
+
   </header>
 
   <div class="container-fluid">
