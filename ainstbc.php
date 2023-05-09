@@ -17,8 +17,15 @@ $celular = $_POST['celular'];
 $email = $_POST['email'];
 $obs = $_POST['obs'];
 $status = $_post['status'];
+if(isset($_FILES ['imagem'])){
+   $ext = strtolower(substr($_FILES ['imagem']['name'],-4));// pega a extenção do arquivo
+   $imagem = date("Y_m_d_h_i_s").$ext;// Muda o nome da imagem e concatena com a variavel acima
+   $dir = './imagens/';
+   move_uploaded_file( $_FILES ['imagem']['tmp_name'],$dir.$imagem);
+   
+}
 
-$sql = "INSERT INTO tbclientes(nome,data,cnpj,inscestadual,responsavel,cpf,rg, endereco,num,numcomp,bairro,cidade,estado,celular,email,obs,status)VALUES('$nome','$data','$cnpj','$inscestadual','$responsavel','$cpf','$rg','$endereco','$num', '$numcomp','$bairro','$cidade','$estado','$celular','$email','$obs','$status')";
+$sql = "INSERT INTO tbclientes(nome,imagem,data,cnpj,inscestadual,responsavel,cpf,rg, endereco,num,numcomp,bairro,cidade,estado,celular,email,obs,status)VALUES('$nome','$imagem','$data','$cnpj','$inscestadual','$responsavel','$cpf','$rg','$endereco','$num', '$numcomp','$bairro','$cidade','$estado','$celular','$email','$obs','$status')";
 
 if (mysqli_query($conn, $sql)){
     header("Location: addtbc.php");

@@ -34,11 +34,14 @@
 
   </header>
     <br>
-    <div class="container-fluid">
+    <div class="container-fluid">      
+    
+        <form  method="post" enctype="multipart/form-data" name="cliente" action="ainstbc.php"> 
 
-        
-
-        <form action="ainstbc.php" method="post" name="cliente">
+            <div class="form col-md-2">
+                <label>Imagem</label>
+                <input type="file" name="imagem" value="" >
+            </div>            
 
             <div class="form col-md-4">
                 <label>Nome</label>
