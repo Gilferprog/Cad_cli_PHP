@@ -1,4 +1,4 @@
-<?php include_once "config.php"?> 
+<?php include_once "config.php";?> 
 <?php 
 $nome = $_POST['nome'];
 $data = date('Y-m-d');
