@@ -7,10 +7,12 @@ $senha_f = $_POST['senha'];
 
 $sql="SELECT * FROM tbusuarios WHERE usuario='$usuario_f'";
 $result = mysqli_query($conn, $sql);
-while ($linha = mysqli_fetch_assoc($result)) {
+while ($linha = mysqli_fetch_assoc($result)){
+    $usuario = $linha['usuario'];
+    $senha = $linha['senha'];
+} if(password_verify($senha_f, $senha)){
     session_start();
-    $_SESSION['usuario'] = $usuario = $linha['usuario'];
-} if($usuario===$usuario_f){
+    $_SESSION['USUARIO'] = $usuario;
     echo "Usuário encontrado";
     header("Location: index.php");
 }else{
