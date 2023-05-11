@@ -1,3 +1,5 @@
+
+<?php include_once "session.php";?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,6 +9,7 @@
     <title>Login do Sitema</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/signin.css">
+    
     
 </head>
 <body>

@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index</title>
-  <?php include_once "top.php"; ?>
-  <?php include_once "config.php"; ?>
+  <?php include_once "top.php";?>
+  <?php include_once "config.php";?>
+  <?php include_once "session.php";?>
   <script>
     function deletar() {
       if (confirm("Deseja deletar esse cadastro?"))
@@ -26,6 +27,7 @@
         <li><a href="index.php">Home</li></a>
         <li><a href="addtbc.php">Cadastrar</li></a>
         <li><a href="#"><?php include_once "form_busca.php";?></li></a> 
+        <li> <?php echo "Logado.......".$usuario?><a href="sair.php">........Sair</li></a>
       </ul>
     </nav>
     
@@ -36,12 +38,10 @@
       nav li{
         list-style: none;/*Remove o marcadore das li*/              
         display: inline-block;/*Posiciona as li lado a lado*/
-        margin: 0px 100px 20px 10px;/*Fas o espaçamento entre as li*/            
+        margin: 0px 100px 20px 10px;/*Fas o espaçamento entre as li*/
+        color: white;          
       }      
     </style>
-
-
-
 
   </header>
 

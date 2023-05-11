@@ -12,7 +12,7 @@ while ($linha = mysqli_fetch_assoc($result)){
     $senha = $linha['senha'];
 } if(password_verify($senha_f, $senha)){
     session_start();
-    $_SESSION['USUARIO'] = $usuario;
+    $_SESSION['usuario'] = $usuario;
     echo "Usuário encontrado";
     header("Location: index.php");
 }else{
